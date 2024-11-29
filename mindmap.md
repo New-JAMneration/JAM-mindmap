@@ -1,0 +1,56 @@
+- JAM
+  - $\mathbf{B}$ Block
+    - $\mathbf{H}$ Header
+      - $\mathbf{H}_p$: parent hash
+        - $\mathbf{H}_p \in \mathbb{H} \,,\quad \mathbf{H}_p \equiv
+          \mathcal{H}(\mathcal{E}(P(\mathbb{H})))$
+      - $\mathbf{H}_r$: prior state root
+        - $\mathbf{H}_r \equiv \mathcal{M}_\sigma(\sigma)$
+          $\sigma$ (state)
+          - $\alpha$
+          - $\beta$
+          - $\gamma$
+          - $\delta$: service accounts
+            - $\delta \in \mathbb{D} \langle \mathbb{N}_S \to \mathbb{A} \rangle$
+              $\mathbb{A}$: service account
+              - $\mathbf{s}$: storage dictionary
+              - $\mathbf{p}$: preimage dictionary
+              - $\mathbf{l}$: preimage history
+              - $b$: balance
+              - $c$: code hash
+              - $g$: `Accumulate` gas
+              - $m$: `On Transfer` gas
+              - $\Lambda$: ==historical lookups function==
+          - $\eta$
+          - $\iota$
+          - $\kappa$
+          - $\lambda$
+          - $\rho$
+          - $\tau$
+          - $\varphi$
+          - $\chi$: service privileges
+            - $\chi_m$: a manager service
+            - $\chi_a$: a service who can alter $\varphi$
+            - $\chi_v$: a service who can alter $\iota$
+            - $\chi_g$: a gas dictionary
+          - $\psi$
+          - $\pi$
+          - $\vartheta$
+          - $\xi$
+      - $\mathbf{H}_x$: extrinsic hash
+      - $\mathbf{H}_t$: a time slot index
+      - $\mathbf{H}_e$: the epoch
+      - $\mathbf{H}_w$: winning tickets
+      - $\mathbf{H}_o$: offenders markders
+      - $\mathbf{H}_i$: a Bandersnatch block author index
+      - $\mathbf{H}_v$: the entropy-rielding VRF signatrue
+      - $\mathbf{H}_s$: a block seal
+    - $\mathbf{E}$ Extrinsic
+      - $\mathbf{E}_T$: tickets
+      - $\mathbf{E}_D$: disputes
+        - $\mathbf{v}$: verdicts
+        - $\mathbf{c}$: culprits
+        - $\mathbf{f}$: faults
+      - $\mathbf{E}_P$: preimages
+      - $\mathbf{E}_A$: availability (assurances)
+      - $\mathbf{E}_G$: guarantees

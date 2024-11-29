@@ -1,0 +1,25 @@
+name: Deploy the mindmap to Github Pages
+on:
+  push:
+    branches: ['main']
+
+  # Allow manual triggering of the workflow from the Actions tab
+  workflow_dispatch:
+jobs:
+  create_html:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+      - name: Create build directory
+        run: mkdir -p build
+      - name: Run script with npx
+        run: npx markmap-cli mindmap.md --no-open -o build/index.html
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
+          publish_dir: ./build
