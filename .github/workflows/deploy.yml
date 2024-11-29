@@ -18,6 +18,8 @@ jobs:
         run: mkdir -p build
       - name: Run script with npx
         run: npx markmap-cli mindmap.md --no-open -o build/index.html
+      - name: Update html title
+        run: sed -i 's/<title>Markmap<\/title>/<title>JAM Mindmap<\/title>/' build/index.html
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
