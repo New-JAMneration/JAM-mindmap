@@ -13,7 +13,7 @@
             - $\gamma_\mathbf{k}$: validator key set for next epoch
             - $\gamma_z$: ring root
             - $\gamma_\mathbf{s}$: slot-sealer series
-            - $\gamma_\mathbf{a}$: tickets accumulator
+            - $\gamma_\mathbf{a}$: tickets accumulator determine the tickets used for next epoch
           - $\delta$: service accounts
             - $\delta \in \mathbb{D} \langle \mathbb{N}_S \to \mathbb{A} \rangle$
               $\mathbb{A}$: service account
