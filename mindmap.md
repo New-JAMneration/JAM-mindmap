@@ -7,7 +7,7 @@
       - $\mathbf{H}_r$: prior state root
         - $\mathbf{H}_r \equiv \mathcal{M}_\sigma(\sigma)$
           $\sigma$ (state)
-          - $\alpha$
+          - $\alpha$: Authorisation pool
           - $\beta$
           - $\gamma$: safrole basic states
             - $\gamma_\mathbf{k}$: validator key set for next epoch
@@ -27,11 +27,11 @@
               - $\Lambda$: ==historical lookups function==
           - $\eta$: entropy accumulator
           - $\iota$: duplicate of $\gamma_{r}$ at beginning of epoch
-          - $\kappa$ : current epoch active validator set
-          - $\lambda$ : last epoch active validator set
-          - $\rho$ : intermediate state
+          - $\kappa$: current epoch active validator set
+          - $\lambda$: last epoch active validator set
+          - $\rho$: intermediate state
           - $\tau$
-          - $\varphi$
+          - $\varphi$: Authorisation Queue (used to update $\alpha$)
           - $\chi$: service privileges
             - $\chi_m$: a manager service
             - $\chi_a$: a service who can alter $\varphi$
