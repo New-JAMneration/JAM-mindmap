@@ -9,7 +9,11 @@
           $\sigma$ (state)
           - $\alpha$
           - $\beta$
-          - $\gamma$
+          - $\gamma$: safrole basic states
+            - $\gamma_\mathbf{k}$: validator key set for next epoch
+            - $\gamma_z$: ring root
+            - $\gamma_\mathbf{s}$: slot-sealer series
+            - $\gamma_\mathbf{a}$: tickets accumulator
           - $\delta$: service accounts
             - $\delta \in \mathbb{D} \langle \mathbb{N}_S \to \mathbb{A} \rangle$
               $\mathbb{A}$: service account
@@ -21,11 +25,11 @@
               - $g$: `Accumulate` gas
               - $m$: `On Transfer` gas
               - $\Lambda$: ==historical lookups function==
-          - $\eta$
-          - $\iota$
-          - $\kappa$
-          - $\lambda$
-          - $\rho$
+          - $\eta$: entropy accumulator
+          - $\iota$: duplicate of $\gamma_{r}$ at beginning of epoch
+          - $\kappa$ : current epoch active validator set
+          - $\lambda$ : last epoch active validator set
+          - $\rho$ : intermediate state
           - $\tau$
           - $\varphi$
           - $\chi$: service privileges
@@ -33,7 +37,11 @@
             - $\chi_a$: a service who can alter $\varphi$
             - $\chi_v$: a service who can alter $\iota$
             - $\chi_g$: a gas dictionary
-          - $\psi$
+          - $\psi$: disputes state
+            - $\psi_\mathbf{g}$: good
+            - $\psi_\mathbf{b}$: bad
+            - $\psi_\mathbf{w}$: wonky
+            - $\psi_\mathbf{o}$: offenders
           - $\pi$
           - $\vartheta$
           - $\xi$
@@ -42,11 +50,14 @@
       - $\mathbf{H}_e$: the epoch
       - $\mathbf{H}_w$: winning tickets
       - $\mathbf{H}_o$: offenders markders
+        - keys $k$ belongs to culprits and faults
       - $\mathbf{H}_i$: a Bandersnatch block author index
       - $\mathbf{H}_v$: the entropy-rielding VRF signatrue
       - $\mathbf{H}_s$: a block seal
     - $\mathbf{E}$ Extrinsic
       - $\mathbf{E}_T$: tickets
+        - $r$: ticket entry index
+        - $p$: ringVRF proof
       - $\mathbf{E}_D$: disputes
         - $\mathbf{v}$: verdicts
         - $\mathbf{c}$: culprits
