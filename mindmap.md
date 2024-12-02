@@ -64,4 +64,8 @@
         - $\mathbf{f}$: faults
       - $\mathbf{E}_P$: preimages
       - $\mathbf{E}_A$: availability (assurances)
+        - $a$: anchor
+    		- $f$: bitstring
+    		- $v$: validator index
+		- $s$: signature
       - $\mathbf{E}_G$: guarantees
