@@ -67,5 +67,5 @@
         - $a$: anchor
     	- $f$: bitstring
     	- $v$: validator index
-	- $s$: signature
+        - $s$: signature
       - $\mathbf{E}_G$: guarantees
