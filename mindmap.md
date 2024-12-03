@@ -36,7 +36,7 @@
           - $\kappa$: current epoch active validator set
           - $\lambda$: last epoch active validator set
           - $\rho$: intermediate state
-          - $\tau$
+          - $\tau$: The most recent block's $\tau$imeslot.
           - $\varphi$: Authorisation Queue (used to update $\alpha$)
           - $\chi$: service privileges
             - $\chi_m$: a manager service
@@ -48,7 +48,48 @@
             - $\psi_\mathbf{b}$: bad
             - $\psi_\mathbf{w}$: wonky
             - $\psi_\mathbf{o}$: offenders
-          - $\pi$
+          - $\pi$: validator activity statistics
+            - $
+                \pi \in \llbracket{\llbracket{(b \in \mathbb{N} \ , t \in \mathbb{N} \ , p \in \mathbb{N} \ , d \in \mathbb{N} \ , g \in \mathbb{N} \ , a \in \mathbb{N} )\rrbracket_\mathsf{V} \rrbracket_2}}
+              $
+              - $b$: The number of blocks produced by the validator
+                - $\pi^{\prime}_0[v]_b \equiv \mathbf{a}[v]_b + (v = \mathbf{H}_i)$
+              - $t$: The number of tickets introduced by the validator
+                - $
+                    \pi^{\prime}_0[v]_t \equiv \mathbf{a}[v]_t + 
+                    \begin{cases}
+                      |\mathbf{E}_T| &\text{if } v = \mathbf{H}_i \\
+                      0 &otherwise
+                    \end{cases}
+                  $
+              - $p$: The number of preimages introduced by the validator
+                - $
+                    \pi^{\prime}_0[v]_p \equiv \mathbf{a}[v]_p + 
+                    \begin{cases}
+                      |\mathbf{E}_P| &\text{if } v = \mathbf{H}_i \\
+                      0 &otherwise
+                    \end{cases}
+                  $
+              - $d$: The total number of octets across all preimages introduced by the validator
+                - $
+                    \pi^{\prime}_0[v]_d \equiv \mathbf{a}[v]_d + 
+                    \begin{cases}
+                     \sum_{d \in \mathbf{E}_P}|d| &\text{if } v = \mathbf{H}_i \\
+                      0 &otherwise
+                    \end{cases}
+                  $
+              - $g$: The number of reports guaranteed by the validator
+                - $\pi^{\prime}_0[v]_g \equiv \mathbf{a}[v]_g + (\kappa'_v \in \mathbf{R})$
+              - $a$: The number of availability assurances by the validator
+                - $\pi^{\prime}_0[v]_a \equiv \mathbf{a}[v]_a + (\exists a \in \mathbf{E}_A : a_v = v)$
+            - $(\mathbf{a}, \pi^{\prime}_1) 
+                \equiv 
+                \begin{cases}
+                (\pi_0, \pi_1) & \quad \text{if } e' = e \\
+                ([(0,...,[0,...]),...], \pi_0) & \quad \text{otherwise}
+                \end{cases}$
+              - $e = \lfloor \frac {\tau}{\mathsf{E}} \rfloor$
+              - $e' = \lfloor \frac{\tau'}{\mathsf{E}} \rfloor$
           - $\vartheta$
           - $\xi$
       - $\mathbf{H}_x$: extrinsic hash
