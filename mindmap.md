@@ -8,7 +8,13 @@
         - $\mathbf{H}_r \equiv \mathcal{M}_\sigma(\sigma)$
           $\sigma$ (state)
           - $\alpha$: Authorisation pool
-          - $\beta$
+          - $\beta$: recent history blocks ($\mathbf{H} = 8$)
+            - $h$: header hash
+            - $\mathbf{b}$: a output of MMR append function $\mathcal{A}$
+              (Appendix E.2)
+            - $s$: state root
+            - $\mathbf{p}$: a dictionary of work packages mapping to work
+              reports
           - $\gamma$: safrole basic states
             - $\gamma_\mathbf{k}$: validator key set for next epoch
             - $\gamma_z$: ring root
@@ -65,7 +71,7 @@
       - $\mathbf{E}_P$: preimages
       - $\mathbf{E}_A$: availability (assurances)
         - $a$: anchor
-    	- $f$: bitstring
-    	- $v$: validator index
+      - $f$: bitstring
+      - $v$: validator index
         - $s$: signature
       - $\mathbf{E}_G$: guarantees
