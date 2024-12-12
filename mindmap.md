@@ -110,9 +110,12 @@
         - $\mathbf{c}$: culprits
         - $\mathbf{f}$: faults
       - $\mathbf{E}_P$: preimages
+        - $\mathbf{E}_P \in \llbracket (\mathbb{N}_S, \mathbb{Y}) \rrbracket$
+          - $\mathbb{N}_S$: service index
+          - $\mathbb{Y}$: preimage (blob string)
       - $\mathbf{E}_A$: availability (assurances)
         - $a$: anchor
-      - $f$: bitstring
-      - $v$: validator index
+        - $f$: bitstring
+        - $v$: validator index
         - $s$: signature
       - $\mathbf{E}_G$: guarantees
